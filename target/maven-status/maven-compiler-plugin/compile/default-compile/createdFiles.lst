@@ -1,0 +1,7 @@
+com\ui\book\dto\Book.class
+com\ui\book\controller\BookController.class
+com\ui\book\service\BooksRestClient.class
+com\ui\book\dto\Book$BookType.class
+com\ui\book\service\BooksRestClient$1.class
+com\ui\book\UiServiceApplication.class
+com\ui\book\constants\BookType.class
