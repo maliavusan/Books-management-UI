@@ -19,7 +19,8 @@
             </select>
             <input type="text" th:field = "*{name}" placeholder="Book name" class = "form-control mb-4 col-4"/>
             <input type="text" th:field = "*{isbnNumber}" placeholder="Book ISBN number" class = "form-control mb-4 col-4"/>
-            <input type="text" th:field = "*{publishDate}" placeholder="Book publish date" class = "form-control mb-4 col-4"/>
+            <label for="publishDate">Publish Date:</label>
+            <input type="date" id="publishDate" name="publishDate" th:field="*{publishDate}" th:format="'dd/MM/yyyy'" />
             <input type="text" th:field = "*{Price}" placeholder="Book price" class = "form-control mb-4 col-4"/>
             <button type="submit" class = "btn btn-info col-2"> Update book</button>
         </form>

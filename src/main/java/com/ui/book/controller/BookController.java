@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.ui.book.constants.BookType;
 import com.ui.book.dto.Book;
 import com.ui.book.service.BooksRestClient;
 

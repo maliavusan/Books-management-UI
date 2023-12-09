@@ -46,16 +46,9 @@
           <input type="text" th:field = "*{isbnNumber}" placeholder="Book ISBN number" class = "form-control mb-4 col-4"/>
           
 
-          <input type="hidden" th:field="*{publishDate}" id="publishDateHidden" />
-
-<input type="text" id="publishDate" placeholder="Book publish date" class="form-control mb-4 col-4" th:value="${#dates.format(publishDate, 'dd/MM/yyyy')}" onfocus="(this.type='date')" onblur="(this.type='text')" />
-
-
-          <!-- <input type="date" th:field="*{publishDate}" id="publishDate" placeholder="Book publish date" class="form-control mb-4 col-4" th:value="${#dates.format(publishDate, 'dd/MM/yyyy')}" /> -->
-          <!-- <input type="text" th:field="*{publishDate}" id="publishDate" placeholder="Book publish date" class="form-control mb-4 col-4" th:value="${#dates.format(publishDate, 'dd/mm/yyyy')}" /> -->
-
-          <!-- <input type="date" th:field="*{publishDate}" id="publishDate" placeholder="Book publish date" class="form-control mb-4 col-4" /> -->
-          <!-- <input type="text" th:field = "*{publishDate}" placeholder="Book publish date" class = "form-control mb-4 col-4"/> -->
+            <label for="publishDate">Publish Date:</label>
+            <input type="date" id="publishDate" name="publishDate" th:field="*{publishDate}" th:format="'dd/MM/yyyy'" />
+          
           <input type="text" th:field = "*{Price}" placeholder="Book price" class = "form-control mb-4 col-4"/>
           <button type="submit" class = "btn btn-info col-2"> Save book</button>
         </form>

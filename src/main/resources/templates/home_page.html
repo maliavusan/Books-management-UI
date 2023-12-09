@@ -26,7 +26,7 @@
                     <td th:text="${book.id}"></td>
                     <td th:text="${book.name}"></td>
                     <td th:text="${book.isbnNumber}"></td>
-                    <td th:text="${book.publishDate}"></td>
+                    <td th:text="${#dates.format(book.publishDate, 'dd/MM/yyyy')}"></td>
                     <td th:text="${book.price}"></td>
                     <td th:text="${book.bookType}"></td>
                     <td>

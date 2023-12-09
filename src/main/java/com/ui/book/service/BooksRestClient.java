@@ -10,10 +10,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
-
 import com.ui.book.dto.Book;
-
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -22,12 +19,9 @@ public class BooksRestClient {
 
     private static final String REST_URI = "http://localhost:38080/management-service/rest/book/";
     
-    //Try 
-    // @Autowired
-    // private  Client client;
     private  Client client = ClientBuilder.newClient();
 
-    // Get Book by ID
+    // Get a book by ID
     public Book getBook(long id) {
 
         try {
@@ -43,7 +37,7 @@ public class BooksRestClient {
         
     }
 
-    // Get a JSON list of books
+    // Get a list of books
     public List<Book> getBooks(){
 
         try {
@@ -94,7 +88,7 @@ public class BooksRestClient {
        
     }
 
-    //Delete book by ID
+    //Delete a book by ID
     public void deleteBook(long id){
 
         try {
