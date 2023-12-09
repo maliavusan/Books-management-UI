@@ -9,6 +9,7 @@ import javax.ws.rs.client.Entity;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import com.ui.book.dto.Book;
 import lombok.extern.slf4j.Slf4j;
@@ -17,7 +18,8 @@ import lombok.extern.slf4j.Slf4j;
 @Component
 public class BooksRestClient {
 
-    private static final String REST_URI = "http://localhost:38080/management-service/rest/book/";
+    @Value("${endpoint.booksMicroservice}")
+    private String REST_URI;
     
     private  Client client = ClientBuilder.newClient();
 
