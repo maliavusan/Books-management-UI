@@ -19,7 +19,7 @@
             <input type="text" th:field = "*{isbnNumber}" placeholder="Book ISBN number" class = "form-control mb-4 col-4" required/>
             <label for="publishDate">Publish Date:</label>
             <input type="date" id="publishDate" name="publishDate" th:field="*{publishDate}" th:format="'dd/MM/yyyy'" required />
-            <input type="text" th:field = "*{Price}" placeholder="Book price" class = "form-control mb-4 col-4" required/>
+            <input type="text" th:field = "*{Price}" placeholder="Book price in ZAR" class = "form-control mb-4 col-4" required pattern="[0-9]+(\.[0-9]+)?" title="Enter a valid numeric value"/>
             <button type="submit" class = "btn btn-info col-2"> Save book</button>
         </form>
       </div>
